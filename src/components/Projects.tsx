@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { ChevronLeft, ChevronRight, MapPin, Calendar, ArrowRight } from 'lucide-react';
-import facility1 from '@/assets/facility-1.jpg';
-import facility2 from '@/assets/facility-2.jpg';
-import facility3 from '@/assets/facility-3.jpg';
+import facility1 from '@/assets/facility-1.png';
+import facility2 from '@/assets/facility-2.png';
+import facility3 from '@/assets/facility-3.png';
 
 const Projects = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  
+
   const projects = [
     {
       id: 1,
@@ -80,8 +80,8 @@ const Projects = () => {
         <div className="relative max-w-7xl mx-auto mb-16">
           <div className="glass-card overflow-hidden">
             <div className="grid grid-cols-1 xl:grid-cols-2 gap-0">
-              {/* Image Section */}
-              <div className="relative h-80 md:h-96 xl:h-[600px] overflow-hidden order-2 xl:order-1">
+              {/* Image Section with landscape aspect ratio */}
+              <div className="relative aspect-[16/9] overflow-hidden order-2 xl:order-1">
                 <img 
                   src={currentProject.image} 
                   alt={currentProject.title}
